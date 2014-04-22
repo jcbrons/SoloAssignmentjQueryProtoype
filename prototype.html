@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Nightlight</title>
+        
+        <!-- the following three lines are from the book and are not the same as what is given in W3Schools....
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+        
+		<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+        -->
+        
+		<!--*****from W3 schools - next three lines.  These lines created a second row of the same buttons and so the above lines from the book were commented out instead so that W3options should work. -->
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
+		<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        
+        
+
+		
+	<style>
+
+	.ui-bar-f
+	{
+	color:#790cf2; 
+	font-style:verdana; font-size:24px;
+	background-color:#f2f098;
+	}
+	.ui-body-f
+	{
+	color:#790cf2; 
+	font-style:verdana; font-size:18px; //affected Settings page toggle bar and "instructions"
+	background-color:#aae9f2;
+	}
+	.ui-page-theme-f
+	{
+	background-color:#aae9f2; //this affects the main background
+	}
+	.ui-icon-myapp-home {
+	background: url(homeIcon.png) 50% 50% no-repeat;
+	background-size: 30px 30px;}
+	
+	img {height:30px; width:30px;}
+	
+	footer {background-color:#f2f098;}
+	.purple {background-color:#cda9ec; color:#790cf2; border:#790cf2;} 
+	.yellow {line-height: 0.0; background-color:#f2f098; color:#790cf2; border: 10px solid #cda9e5; padding:0;}
+		 
+	 .ui-slider-handle{background:#cda9e5;}
+	 article {width:80%; margin:0 auto;}
+	 
+	</style>
+
+    </head>
+<body>
+   <!-- HOME page - MAIN PAGE --> 
+<div data-role="page" id="home" data-theme="f">
+		<!-- HEADER SECTION 
+    <header data-role="header">
+    	<h1>Nightlight</h1>
+    </header>-->
+    <p></p><br>
+    <div>
+    
+    <article data-role="button">
+            <a href="#Nightlight" class="ui-corner-all yellow ui-btn "  data-transition="slide">
+            <h1>nightlight</h1>
+     		</a>
+    </article>
+    <br>
+    <article data-role="button">
+            <a href="#Play" class="ui-btn ui-corner-all yellow" data-transition="slide">
+            <h1>play</h1>
+            </a>
+    </article>
+    <br>
+    <article data-role="button">
+            <a href="#Settings" class="ui-btn ui-corner-all yellow" data-transition="slide">
+            <h1>settings</h1>
+            </a>
+	</article>			</div>
+    <!-- note - there is no footer on the home page!! -->
+</div><!-- End Home Page -->
+
+
+
+<!-- next page - Nightlight -->
+<div data-role="page" id="Nightlight" data-theme="f" onload="starAnimation()">
+<p></p><br><p></p><br><p></p>
+
+<div class="aStar">
+<img src="star.png" class="starry" style="position:relative; left: 95px;" alt="star">
+<img src="star.png" class="starry" style="position:relative; left: -120px;" alt="star">
+<img src="star.png" class="starry" style="position:relative; left: -70px;" alt="star">
+<img src="star.png" class="starry" style="position:relative; left: -30px;" alt="star">
+</div>
+<p></p>
+
+<div class="aStar">
+<img src="star.png" class="starry" style="position:relative; left: -80px;" alt="star">
+<img src="star.png" class="starry" style="position:relative; left: -20px;" alt="star">
+<img src="star.png" class="starry" style="position:relative; left: -150px;" alt="star">
+<img src="star.png" class="starry" style="position:relative; left: 0px;" alt="star">
+</div>
+<p></p>
+
+<div class="aStar">
+<img src="star.png" class="starry" style="position:relative; left: -90px;" alt="star">
+<img src="star.png" class="starry" style="position:relative; left: 30px;" alt="star">
+<img src="star.png" class="starry" style="position:relative; left: -70px;" alt="star">
+<img src="star.png" class="starry" style="position:relative; left: -150px;" alt="star">
+</div>
+<p></p>
+
+<div class="aStar">
+<img src="star.png" class="starry" style="position:relative; left: 0px;" alt="star">
+<img src="star.png" class="starry" style="position:relative; left: 15px;" alt="star">
+<img src="star.png" class="starry" style="position:relative; left: -150px;" alt="star">
+<img src="star.png" class="starry" style="position:relative; left: -80px;" alt="star">
+</div>
+
+<p></p>
+<div class="aStar">
+<img src="star.png" class="starry" style="position:relative; left: 90px;" alt="star">
+<img src="star.png" class="starry" style="position:relative; left: -20px;" alt="star">
+<img src="star.png" class="starry" style="position:relative; left: 70px;" alt="star">
+<img src="star.png" class="starry" style="position:relative; left: -135px;" alt="star">
+</div>
+
+<div class="aStar">
+<img src="star.png" class="starry" style="position:relative; left: 0px;" alt="star">
+<img src="star.png" class="starry" style="position:relative; left: 15px;" alt="star">
+<img src="star.png" class="starry" style="position:relative; left: -150px;" alt="star">
+<img src="star.png" class="starry" style="position:relative; left: -80px;" alt="star">
+</div>
+
+<script>
+
+		
+		$( ".aStar" ).click(function() {
+  $( ".starry" ).animate({
+	  left: "+=1000"},7000);
+	  });
+	  
+</script>    
+		<!-- FOOTER SECTION -->
+<footer data-role="footer" data-position="fixed">
+    <nav data-role="navbar">
+        <ul>
+           <li><a href="#home" data-icon="myapp-home" class="ui-nodisc-icon"></a></li>
+        </ul>
+    </nav>
+	</footer>
+</div><!-- End Nightlight Play -->
+
+
+
+
+<!-- next page - PLAY -->
+<div data-role="page" id="Play" data-theme="f">
+
+<div class="aBubble">
+<img src="bubble.png" class="bubbly" style="position:relative; left: 95px;" alt="bubble">
+<img src="bubble.png" class="bubbly"style="position:relative; left: -120px;" alt="bubble">
+<img src="bubble.png" class="bubbly" style="position:relative; left: -70px;" alt="bubble">
+<img src="bubble.png" class="bubbly" style="position:relative; left: -30px;" alt="bubble">
+</div>
+<p></p>
+
+<div class="aBubble">
+<img src="bubble.png" class="bubbly" style="position:relative; left: -80px;" alt="bubble">
+<img src="bubble.png" class="bubbly" style="position:relative; left: -20px;" alt="bubble">
+<img src="bubble.png" class="bubbly" style="position:relative; left: -150px;" alt="bubble">
+<img src="bubble.png" class="bubbly" style="position:relative; left: 0px;" alt="bubble">
+</div>
+<p></p>
+
+<div class="aBubble">
+<img src="bubble.png" class="bubbly" style="position:relative; left: -90px;" alt="bubble">
+<img src="bubble.png" class="bubbly" style="position:relative; left: 30px;" alt="bubble">
+<img src="bubble.png" class="bubbly" style="position:relative; left: -70px;" alt="bubble">
+<img src="bubble.png" class="bubbly" style="position:relative; left: -150px;" alt="bubble">
+</div>
+<p></p>
+
+<div class="aBubble">
+<img src="bubble.png" class="bubbly" style="position:relative; left: 0px;" alt="bubble">
+<img src="bubble.png" class="bubbly" style="position:relative; left: 15px;" alt="bubble">
+<img src="bubble.png" class="bubbly" style="position:relative; left: -150px;" alt="bubble">
+<img src="bubble.png" class="bubbly" style="position:relative; left: -80px;" alt="bubble">
+</div>
+
+<p></p>
+<div class="aBubble">
+<img src="bubble.png" class="bubbly" style="position:relative; left: 90px;" alt="bubble">
+<img src="bubble.png" class="bubbly" style="position:relative; left: -20px;" alt="bubble">
+<img src="bubble.png" class="bubbly" style="position:relative; left: 70px;" alt="bubble">
+<img src="bubble.png" class="bubbly" style="position:relative; left: -135px;" alt="bubble">
+</div>
+
+<div class="aBubble">
+<img src="bubble.png" class="bubbly" style="position:relative; left: 0px;" alt="bubble">
+<img src="bubble.png" class="bubbly" style="position:relative; left: 15px;" alt="bubble">
+<img src="bubble.png" class="bubbly" style="position:relative; left: -150px;" alt="bubble">
+<img src="bubble.png" class="bubbly" style="position:relative; left: -80px;" alt="bubble">
+</div>
+
+<script>
+
+		
+		$( ".aBubble" ).click(function() {
+  $( ".bubbly" ).animate({
+	  left: "+=1000"},7000);
+	  });
+	  
+</script> 
+    
+    	<!-- FOOTER SECTION -->
+ <footer data-role="footer" data-position="fixed">
+    <nav data-role="navbar">
+        <ul>
+           <li><a href="#home" data-icon="myapp-home" class="ui-nodisc-icon"></a></li>
+        </ul>
+    </nav>
+	</footer>
+</div><!-- End of Play Page --> 
+
+
+
+
+
+<!-- next page - Settings -->
+<div data-role="page" id="Settings" data-theme="f">
+			<!-- HEADER SECTION -->
+    <header data-role="header" data-theme="f"> 
+        <h1>settings</h1>
+    </header>
+    <div data-role="main" class="ui-content ui-body-f" >
+    <form method="post" action="demoform.asp">
+      <label for="points">Audio:</label>
+      <input type="range" name="points" id="points" value="50" min="0" max="100" class="purple">
+    </form>
+    
+    <form method="post" action="demoform.asp">
+      <label for="points">Timer in minutes:</label>
+      <input type="range" name="points" value="60" min="0" max="360" class="purple">
+    </form>
+    
+    <form method="post" action="demoform.asp">
+      <label for="points">Brightness:</label>
+      <input type="range" name="points" value="50" min="0" max="100" class="purple">
+    </form>
+    
+    <form method="post" action="demoform.asp" class="purple">
+      <label for="switch">In App Purchases</label>
+        <input type="checkbox" name="switch" id="switch" value="In App Purchases">
+    </form>
+    <!--instructions link that opens instructions dialog box - from http://www.w3schools.com/jquerymobile/jquerymobile_pages.asp-->
+    <a href="#instructions">Instructions</a>
+  </div>
+  
+ 
+
+      		<!-- FOOTER SECTION -->
+    <footer data-role="footer" data-position="fixed">
+    <nav data-role="navbar">
+        <ul>
+          <li><a href="#home" data-icon="myapp-home" class="ui-nodisc-icon"></a></li>
+        </ul>
+    </nav>
+	</footer>
+</div><!-- End of Settings page --> 
+
+<!-- Beginning of Instructions page (link from Settings) --> 
+ <div data-role="page" data-dialog="true" id="instructions" data-theme="f">
+   <div data-role="header">
+    <h1>Instructions</h1>
+  </div>
+  <div data-role="main" class="ui-content">
+  	<p>From the Home screen you have an option to Play and an option for Nightlight.  In the Play mode, each touch of the screen creates a random image that then floats across the screen before fading away.  Maintaining contact with the screen produces more of the same image.  In the Nightlight screen, images do not vanish from the screen and your device will not shut off due to lack of interaction with the app.  It is recommended that you leave your device plugged in if you do not want your battery drained or set a timer through the Settings screen to turn off your app and preserve your battery.</p>
+    <a href="#Settings">Return to Settings</a>
+  </div><!-- End of instructions page --> 
+ </div> 
+</body>
+</html>
